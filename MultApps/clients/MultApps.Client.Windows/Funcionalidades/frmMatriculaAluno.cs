@@ -16,5 +16,7 @@ namespace MultApps.Client.Windows.Funcionalidades
         {
             InitializeComponent();
         }
+
+        
     }
 }
