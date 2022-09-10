@@ -21,8 +21,6 @@ namespace MultApps.Client.Windows
             form.Show();
         }
 
-        
-
         private void btnAbrirFormReajusteSalarial_Click(object sender, EventArgs e)
         {
             var form = new frmReajusteSalarial();

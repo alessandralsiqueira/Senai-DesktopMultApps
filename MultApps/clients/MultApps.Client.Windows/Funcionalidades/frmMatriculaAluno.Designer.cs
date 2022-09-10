@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMatriculaAluno));
             this.lblnome = new System.Windows.Forms.Label();
-            this.txtnomecx = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblanonascimento = new System.Windows.Forms.Label();
             this.txtAnoNascimento = new System.Windows.Forms.TextBox();
             this.lblultimoaniversario = new System.Windows.Forms.Label();
             this.txtAnoUltimoAniversario = new System.Windows.Forms.TextBox();
             this.lblcategoria = new System.Windows.Forms.Label();
-            this.btnidentificar = new System.Windows.Forms.Button();
+            this.btnIdentificarategoria = new System.Windows.Forms.Button();
             this.lblamarelo = new System.Windows.Forms.Label();
-            this.lblCategoriaText = new System.Windows.Forms.Label();
+            this.lblCategorias = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblnome
@@ -51,12 +51,12 @@
             this.lblnome.Text = "&Nome:";
             this.lblnome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtnomecx
+            // txtNome
             // 
-            this.txtnomecx.Location = new System.Drawing.Point(57, 24);
-            this.txtnomecx.Name = "txtnomecx";
-            this.txtnomecx.Size = new System.Drawing.Size(340, 23);
-            this.txtnomecx.TabIndex = 1;
+            this.txtNome.Location = new System.Drawing.Point(57, 24);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(340, 23);
+            this.txtNome.TabIndex = 1;
             // 
             // lblanonascimento
             // 
@@ -74,6 +74,7 @@
             this.txtAnoNascimento.Name = "txtAnoNascimento";
             this.txtAnoNascimento.Size = new System.Drawing.Size(64, 23);
             this.txtAnoNascimento.TabIndex = 3;
+            this.txtAnoNascimento.Validating += new System.ComponentModel.CancelEventHandler(this.txtAnoUltimoAniversario_Validating);
             // 
             // lblultimoaniversario
             // 
@@ -101,14 +102,15 @@
             this.lblcategoria.TabIndex = 7;
             this.lblcategoria.Text = "Categoria:";
             // 
-            // btnidentificar
+            // btnIdentificarategoria
             // 
-            this.btnidentificar.Location = new System.Drawing.Point(19, 104);
-            this.btnidentificar.Name = "btnidentificar";
-            this.btnidentificar.Size = new System.Drawing.Size(142, 23);
-            this.btnidentificar.TabIndex = 8;
-            this.btnidentificar.Text = "Identificar Categoria";
-            this.btnidentificar.UseVisualStyleBackColor = true;
+            this.btnIdentificarategoria.Location = new System.Drawing.Point(19, 104);
+            this.btnIdentificarategoria.Name = "btnIdentificarategoria";
+            this.btnIdentificarategoria.Size = new System.Drawing.Size(142, 23);
+            this.btnIdentificarategoria.TabIndex = 8;
+            this.btnIdentificarategoria.Text = "Identificar Categoria";
+            this.btnIdentificarategoria.UseVisualStyleBackColor = true;
+            this.btnIdentificarategoria.Click += new System.EventHandler(this.btnIdentificarategoria_Click);
             // 
             // lblamarelo
             // 
@@ -119,14 +121,14 @@
             this.lblamarelo.Size = new System.Drawing.Size(0, 15);
             this.lblamarelo.TabIndex = 9;
             // 
-            // lblCategoriaText
+            // lblCategorias
             // 
-            this.lblCategoriaText.BackColor = System.Drawing.Color.Yellow;
-            this.lblCategoriaText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCategoriaText.Location = new System.Drawing.Point(230, 104);
-            this.lblCategoriaText.Name = "lblCategoriaText";
-            this.lblCategoriaText.Size = new System.Drawing.Size(167, 23);
-            this.lblCategoriaText.TabIndex = 10;
+            this.lblCategorias.BackColor = System.Drawing.Color.Yellow;
+            this.lblCategorias.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCategorias.Location = new System.Drawing.Point(230, 104);
+            this.lblCategorias.Name = "lblCategorias";
+            this.lblCategorias.Size = new System.Drawing.Size(167, 23);
+            this.lblCategorias.TabIndex = 10;
             // 
             // frmMatriculaAluno
             // 
@@ -134,15 +136,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(409, 139);
-            this.Controls.Add(this.lblCategoriaText);
+            this.Controls.Add(this.lblCategorias);
             this.Controls.Add(this.lblamarelo);
-            this.Controls.Add(this.btnidentificar);
+            this.Controls.Add(this.btnIdentificarategoria);
             this.Controls.Add(this.lblcategoria);
             this.Controls.Add(this.txtAnoUltimoAniversario);
             this.Controls.Add(this.lblultimoaniversario);
             this.Controls.Add(this.txtAnoNascimento);
             this.Controls.Add(this.lblanonascimento);
-            this.Controls.Add(this.txtnomecx);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblnome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -156,14 +158,14 @@
         #endregion
 
         private Label lblnome;
-        private TextBox txtnomecx;
+        private TextBox txtNome;
         private Label lblanonascimento;
         private TextBox txtAnoNascimento;
         private Label lblultimoaniversario;
         private TextBox txtAnoUltimoAniversario;
         private Label lblcategoria;
-        private Button btnidentificar;
+        private Button btnIdentificarategoria;
         private Label lblamarelo;
-        private Label lblCategoriaText;
+        private Label lblCategorias;
     }
 }
